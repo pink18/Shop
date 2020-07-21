@@ -1,0 +1,127 @@
+main{
+    width: 1000px;
+    margin: 0 auto;
+}
+button{
+    cursor: pointer;
+}
+.header{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.return{
+    width: 90px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    border: 1px solid #dcdfe6;
+    margin-top: 15px;
+    border-radius: 5px;
+    outline: none;
+}
+.big>img{
+    width: 400px;
+    height: 400px;
+}
+.small>img{
+    width: 80px;
+    height: 80px;
+    border: 1px solid #6e496e;
+}
+.message{
+    margin-left: 200px;
+}
+.title{
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+}
+.name{
+    font-weight: 600;
+    color: #000;
+}
+.place{
+    margin: 20px 0;
+    color: #666;
+}
+.h-price{
+    margin: 20px 0;
+    color: #ff0000;
+}
+
+.shopping{
+    width: 126px;
+    height: 40px;
+    background-color: #f56c6c;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.same{
+    width: 100%;
+    margin-top: 10px;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #dedede;
+}
+.shop{
+    margin-top: 10px;
+}
+.shop img{
+    width: 180px;
+    height: 180px;
+}
+.introduce{
+    width: 180px;
+    height: 30px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    line-height: 30px;
+}
+.price{
+    color: #ff4500;
+}
+.together{
+    width: 44px;
+    height: 25px;
+    background-color: #ab7fd1;
+    padding: 2px 6px;
+    color: #fff;
+}
+.sales{
+    color: #fa4c81;
+}
+.item{
+    display: flex;
+    flex-wrap: wrap;
+}
+.name{
+    color: #424242;
+}
+.mark{
+    width: 200px;
+    height: 200px;
+    background-color: #999;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    border-radius: 10px;
+    display: none;
+    cursor: move;
+}
+.glass{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    left: 400px;
+}
+.glass>img{
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    display: none;
+}

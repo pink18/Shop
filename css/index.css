@@ -1,0 +1,102 @@
+header {
+    width: 100%;
+    padding-top: 20px;
+    position: relative;
+    box-shadow: 0px 2px 6px #999;
+}
+
+.h-top {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.h-top img {
+    width: 188px;
+    height: 75px;
+    vertical-align: middle;
+}
+
+.search {
+    width: 600px;
+    font-size: 0;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 18px;
+}
+
+.s-box {
+    width: 369px;
+    height: 40px;
+    padding: 0 15px;
+    vertical-align: middle;
+    border: 1px solid #dcdfe6;
+    outline: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.s-box::-webkit-input-placeholder {
+    /*WebKit browsers*/
+    color: #c0c4cc;
+}
+
+.s-box::-moz-input-placeholder {
+    /*Mozilla Firefox*/
+    color: #c0c4cc;
+}
+
+.s-box::-ms-input-placeholder {
+    /*Internet Explorer*/
+    color: #c0c4cc;
+}
+
+.s-btn {
+    height: 40px;
+    padding: 8px 30px;
+    background-color: #fff;
+    border: 1px solid #dcdfe6;
+    vertical-align: middle;
+    outline: none;
+    cursor: pointer;
+    border-left: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.h-bottom {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+.h-bottom>ul {
+    display: flex;
+}
+
+.h-bottom li {
+    margin-left: 20px;
+    padding: 0 20px;
+}
+
+.h-bottom a {
+    font-weight: 600;
+    color: #000;
+}
+.loading{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #eeeeee;
+    opacity: 0.8;
+    display: none;
+}
+.loading>img{
+    width: 400px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
