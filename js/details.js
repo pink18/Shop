@@ -1,9 +1,33 @@
 $(window).ready(function () {
+    var x=0;
+    $(`.big>img:eq(${x})`).css({
+        display: 'block'
+    });
+    $(`.small>img:eq(${x})`).css({
+        opacity: 1
+    });
+
+    // 鼠标移入
+    $('.small').on('mouseover', 'img', function () {
+        $(`.small>img:eq(${x})`).css({
+            opacity: 0.3
+        });
+        $(`.big>img:eq(${x})`).css({
+            display: 'none'
+        });
+        x = $(this).index();
+        $(`.small>img:eq(${x})`).css({
+            opacity: 1
+        });
+        $(`.big>img:eq(${x})`).css({
+            display: 'block'
+        });
+    })
     $('.big').on('mouseover', function () {
         $('.mark').css({
             display: 'block'
         });
-        $('.glass>img').css({
+        $(`.glass>img:eq(${x})`).css({
             display: 'block',
         });
     })
@@ -11,7 +35,7 @@ $(window).ready(function () {
         $('.mark').css({
             display: 'none'
         });
-        $('.glass>img').css({
+        $(`.glass>img:eq(${x})`).css({
             display: 'none'
         });
     })
@@ -35,7 +59,7 @@ $(window).ready(function () {
             left: maskX + 'px',
             top: maskY + 'px'
         });
-        $('.glass>img').css({
+        $(`.glass>img:eq(${x})`).css({
             left:-maskX * 2 +'px',
             top:-maskY * 2 +'px'
         });

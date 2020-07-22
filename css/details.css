@@ -23,6 +23,7 @@ button{
 .big>img{
     width: 400px;
     height: 400px;
+    display: none;
 }
 .small>img{
     width: 80px;
