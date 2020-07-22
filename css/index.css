@@ -77,12 +77,12 @@ header {
 
 .h-bottom li {
     margin-left: 20px;
-    padding: 0 20px;
 }
-
-.h-bottom a {
+.index>li>a{
+    display: block;
+    padding: 10px 20px;
+    color: inherit;
     font-weight: 600;
-    color: #000;
 }
 .loading{
     width: 100%;
@@ -90,7 +90,7 @@ header {
     position: fixed;
     top: 0;
     background-color: #eeeeee;
-    opacity: 0.8;
+    opacity: 0.9;
     display: none;
 }
 .loading>img{
@@ -99,4 +99,23 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+.t-return{
+    width: 66px;
+    height: 60px;
+    padding: 10px;
+    background-color: #993399;
+    opacity: 0.8;
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    line-height: 20px;
+    cursor: pointer;
+    display: none;
+}
+.t-return:hover{
+    opacity: 1;
 }

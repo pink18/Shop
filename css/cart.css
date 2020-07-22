@@ -1,0 +1,22 @@
+nav{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    height: 60px;
+    
+}
+.n-title{
+    display: flex;
+    justify-content: space-around;
+}
+.n-title a{
+    color: #666;
+    padding: 0 40px;
+    display: block;
+    line-height: 30px;
+}
+.n-title a:hover{
+    border-radius: 50px;
+    background-color: #800080;
+    color: #fff;
+}

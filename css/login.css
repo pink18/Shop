@@ -24,7 +24,7 @@ p{
 }
 div{
     position: absolute;
-    top: 20%;
+    top: 130px;
     left: 50%;
     transform: translate(-50%,0);
 }

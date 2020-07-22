@@ -13,6 +13,7 @@ p{
     line-height: 40px;
     font-size: 12px;
     color: red;
+    opacity: 0;
 }
 .signup{
     margin-top: 5px;
@@ -23,7 +24,7 @@ p{
 }
 div{
     position: absolute;
-    top: 20%;
+    top: 130px;
     left: 50%;
     transform: translate(-50%,0);
 }
