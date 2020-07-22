@@ -119,10 +119,11 @@ button{
     height: 400px;
     overflow: hidden;
     left: 400px;
+    display: none;
 }
 .glass>img{
     position: absolute;
     width: 800px;
     height: 800px;
-    display: none;
+    /* display: none; */
 }

@@ -15,7 +15,7 @@ $(window).ready(function () {
         $(`.big>img:eq(${x})`).css({
             display: 'none'
         });
-        x = $(this).index();
+        x = $(this).index();// 获取当前元素的索引值
         $(`.small>img:eq(${x})`).css({
             opacity: 1
         });
@@ -27,6 +27,9 @@ $(window).ready(function () {
         $('.mark').css({
             display: 'block'
         });
+        $(`.glass`).css({
+            display: 'block',
+        });
         $(`.glass>img:eq(${x})`).css({
             display: 'block',
         });
@@ -34,6 +37,9 @@ $(window).ready(function () {
     $('.big').on('mouseout', function () {
         $('.mark').css({
             display: 'none'
+        });
+        $(`.glass`).css({
+            display: 'none',
         });
         $(`.glass>img:eq(${x})`).css({
             display: 'none'
