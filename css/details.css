@@ -25,10 +25,13 @@ button{
     height: 400px;
     display: none;
 }
+
 .small>img{
+    display: inline-block;
     width: 80px;
     height: 80px;
-    border: 1px solid #6e496e;
+    border: 2px solid #fff;
+    cursor: pointer;
 }
 .message{
     margin-left: 200px;
@@ -41,6 +44,12 @@ button{
 .name{
     font-weight: 600;
     color: #000;
+    font-size: 16px;
+    width: 180px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-all;
 }
 .place{
     margin: 20px 0;
@@ -66,6 +75,8 @@ button{
     height: 50px;
     line-height: 50px;
     border-bottom: 1px solid #dedede;
+    color: #666;
+    font-weight: 600;
 }
 .shop{
     margin-top: 10px;
@@ -99,6 +110,9 @@ button{
     display: flex;
     flex-wrap: wrap;
 }
+.item>li{
+    margin-left: 15px;
+}
 .name{
     color: #424242;
 }
@@ -125,5 +139,5 @@ button{
     position: absolute;
     width: 800px;
     height: 800px;
-    /* display: none; */
+    display: none;
 }

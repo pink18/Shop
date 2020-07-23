@@ -1,4 +1,4 @@
-$(window).on('load', function () {
+$(window).ready( function () {
     $('#resgiter').on('click', function (e) {
         if ($('#resgiter').html() == '退出登录') {
             $('#login').html('登录');

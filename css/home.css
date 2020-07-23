@@ -45,6 +45,15 @@ main{
     position: absolute;
     top: 50%;
     transform: translate(0,-50%);
+    text-align: center;
+    line-height: 50px;
+    opacity: 0.6;
+}
+.left:hover,.right:hover{
+    opacity: 1;
+}
+.left:hover i,.right:hover i{
+    color: #fff;
 }
 .left{
     left: -50px;

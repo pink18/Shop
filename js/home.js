@@ -3,7 +3,7 @@ $(window).on('load', function () {
     var right = document.querySelector('.right');
     var wraper = document.querySelector('.rotation');
     var pic = document.querySelector('.pic');
-    var img = document.querySelectorAll('img');
+    var img = document.querySelectorAll('.pic>img');
     var count = 0;
     // parent.$('.loading').css({
     //     display: 'block'
@@ -13,7 +13,6 @@ $(window).on('load', function () {
     //         display: 'none'
     //     })
     // }, 500)
-
     parent.$(`li`).css({
         borderBottom: 'none',
         color: '#000'
@@ -33,7 +32,7 @@ $(window).on('load', function () {
 
     right.addEventListener('click', function () {
         stop();
-        if (count == img.length - 2) {
+        if (count == img.length - 1) {
             count = 0;
             pic.style.left = count * -wraper.offsetWidth + 'px';
             pic.style.transition = 'none';
@@ -46,7 +45,7 @@ $(window).on('load', function () {
     left.addEventListener('click', function () {
         stop();
         if (count <= 0) {
-            count = img.length - 2;
+            count = img.length - 1;
             pic.style.left = count * -wraper.offsetWidth + 'px';
             pic.style.transition = 'none';
         }
@@ -63,7 +62,7 @@ $(window).on('load', function () {
 
     function play() {
         timer = setInterval(function () {
-            if (count == img.length - 2) {
+            if (count == img.length - 1) {
                 count = 0;
                 pic.style.left = count * -wraper.offsetWidth + 'px';
                 pic.style.transition = 'none';
@@ -95,7 +94,7 @@ $(window).on('load', function () {
     //     var thisheight = $(document).height();
     //     main.height(thisheight);
     // });
-    var shoplist = localStorage.getItem('shoplist');
+    shoplist = localStorage.getItem('shoplist');
     if (shoplist) {
         shoplist = JSON.parse(shoplist);
         $.each(shoplist, function (index, item) {
@@ -104,7 +103,7 @@ $(window).on('load', function () {
                 img_list_url,
                 title,
                 price,
-                mack
+                mack,
             } = item;
             var tmp = `<li>
             <a href="./details.html">
@@ -120,7 +119,6 @@ $(window).on('load', function () {
             </li>`
             $('.item').append(tmp)
         })
-
         return;
     } else {
         $.ajax({
@@ -138,8 +136,18 @@ $(window).on('load', function () {
             }
         })
     }
-
 })
+setTimeout(function(){
+    $('.item').children().on('click',function(){
+        var index=$(this).index();
+        var id=shoplist[index].Id;
+        var one=shoplist[index].type_one;
+        sessionStorage.setItem('Id',id);
+        sessionStorage.setItem('type_one',one);
+    })
+},16.7)
+
+
 var nav = document.querySelector('nav');
 var main = document.querySelector('main');
 var footer = document.querySelector('footer');
