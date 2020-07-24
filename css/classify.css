@@ -1,0 +1,67 @@
+nav{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    height: 60px;
+    
+}
+.n-title{
+    display: flex;
+    justify-content: space-around;
+}
+.n-title li{
+    color: #666;
+}
+
+.n-title a:hover{
+    border-radius: 50px;
+    background-color: #800080;
+    color: #fff;
+}
+
+.n-title a{
+    color: inherit;
+    padding: 0 40px;
+    display: block;
+    line-height: 30px;
+}
+.shop>div{
+    display: inline-block;
+    margin-left: 15px;
+}
+.name{
+    font-size: 16px;
+    color: #424242;
+}
+.shop{
+    margin-top: 10px;
+    width: 1200px;
+    margin: 0 auto;
+}
+.shop img{
+    width: 220px;
+    height: 220px;
+}
+.introduce{
+    width: 220px;
+    height: 30px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    line-height: 30px;
+}
+.price{
+    color: #ff4500;
+}
+.together{
+    width: 44px;
+    height: 25px;
+    padding: 2px 6px;
+    color: #fff;
+}
+.sales{
+    color: #fa4c81;
+}
+.title{
+    text-align: center;
+}

@@ -2,7 +2,12 @@ parent.$('html,body').scrollTop(0);
 parent.$('iframe').css({
     height: 1120 + 'px'
 })
-
+$('.return').on('click',function(){
+    parent.$('left').css({
+        display:'none'
+    })
+    location.href='../view/home.html'
+})
 var id = sessionStorage.getItem('Id');
 var one = sessionStorage.getItem('type_one');
 

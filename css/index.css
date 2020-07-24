@@ -119,3 +119,27 @@ header {
 .t-return:hover{
     opacity: 1;
 }
+.left{
+    width: 122px;
+    border: 1px solid #986d98;
+    padding: 10px;
+    position: fixed;
+    text-align: center;
+    line-height: 30px;
+    left: 10px;
+    top: 35%;
+    border-radius: 5px;
+    display: none;
+    background-color: #fff;
+}
+.left>p{
+    cursor: pointer;
+}
+.left>p:hover{
+    font-weight: bolder !important;
+    color: purple !important;
+    filter: drop-shadow(0 0 10px purple) !important;
+}
+.title{
+    text-align: center;
+}

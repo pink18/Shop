@@ -5,14 +5,14 @@ $(window).on('load', function () {
     var pic = document.querySelector('.pic');
     var img = document.querySelectorAll('.pic>img');
     var count = 0;
-    // parent.$('.loading').css({
-    //     display: 'block'
-    // })
-    // setTimeout(function () {
-    //     parent.$('.loading').css({
-    //         display: 'none'
-    //     })
-    // }, 500)
+    parent.$('.loading').css({
+        display: 'block'
+    })
+    setTimeout(function () {
+        parent.$('.loading').css({
+            display: 'none'
+        })
+    }, 1500)
     parent.$(`li`).css({
         borderBottom: 'none',
         color: '#000'
@@ -21,7 +21,25 @@ $(window).on('load', function () {
         borderBottom: '2px solid #860c86',
         color: '#860c86'
     });
-
+    parent.$('.left').css({
+        display: 'none'
+    })
+    var x=0;
+    $('.n-title').on('click', 'li', function () {
+        $(`.n-title>li:eq(${x})`).css({
+            borderRadius: '0',
+            backgroundColor: 'transparent',
+            color: '#666'
+        })
+        x = $(this).index();
+        $(`.n-title>li:eq(${x})`).css({
+            borderRadius: '50px',
+            backgroundColor: '#800080',
+            color: '#fff'
+        })
+        var category= $(`.n-title>li:eq(${x})>a`).html();
+        sessionStorage.setItem('category', category);
+    })
     pic.onmouseover = function () {
         stop();
     }
@@ -124,7 +142,7 @@ $(window).on('load', function () {
         $.ajax({
             url: 'http://vebcoder.cn:9527/api/goodList',
             data: {
-  
+
             },
             method: 'get',
             success: function (data) {
@@ -137,32 +155,32 @@ $(window).on('load', function () {
         })
     }
 })
-setTimeout(function(){
-    $('.item').children().on('click',function(){
-        var index=$(this).index();
-        var id=shoplist[index].Id;
-        var one=shoplist[index].type_one;
-        sessionStorage.setItem('Id',id);
-        sessionStorage.setItem('type_one',one);
+setTimeout(function () {
+    $('.item').children().on('click', function () {
+        var index = $(this).index();
+        var id = shoplist[index].Id;
+        var one = shoplist[index].type_one;
+        sessionStorage.setItem('Id', id);
+        sessionStorage.setItem('type_one', one);
     })
-},16.7)
+}, 16.7)
 
 
-var nav = document.querySelector('nav');
-var main = document.querySelector('main');
-var footer = document.querySelector('footer');
-var a=parent.$('iframe').outerHeight();
+// var nav = document.querySelector('nav');
+// var main = document.querySelector('main');
+// var footer = document.querySelector('footer');
+var a = parent.$('iframe').outerHeight();
 parent.onscroll = function () {
     var H = parent.innerHeight; // 获取视图窗口高度
     var scrollTop = parent.document.documentElement.scrollTop || parent.document.body.scrollTop;
     var pageH = document.body.offsetHeight;
-    var headerH=parent.$('header')[0].offsetHeight;
+    var headerH = parent.$('header')[0].offsetHeight;
     if (H + scrollTop - headerH >= pageH) {
-        a+=300;
+        a += 300;
         parent.$('iframe').css({
             height: a + 'px'
         })
         // bug:慢 在0.5s内多次触底 --> 解决方式 防抖      
-        
+
     }
 }

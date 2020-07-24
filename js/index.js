@@ -48,18 +48,21 @@ $(window).ready( function () {
         $('#login').html('购物车');
         $('#resgiter').html('退出登录');
     }
-    // $('.index').on('click', 'li', function () {
-    //     $(`li`).css({
-    //         borderBottom: 'none',
-    //         color:'#000'
-    //     });
-    //     var x = $(this).index();
-    //     // console.log(`${x}`);
-    //     $(`li:eq(${x})`).css({
-    //         borderBottom: '2px solid #860c86',
-    //         color:'#860c86'
-    //     });
-    // })
+    $('.index').on('click', 'li', function () {
+        $('.left').css({
+            display:'none'
+        })
+        // $(`li`).css({
+        //     borderBottom: 'none',
+        //     color:'#000'
+        // });
+        // var x = $(this).index();
+        // // console.log(`${x}`);
+        // $(`li:eq(${x})`).css({
+        //     borderBottom: '2px solid #860c86',
+        //     color:'#860c86'
+        // });
+    })
     $('.t-return').on('click',function(){
         $('html,body').scrollTop(0);
     })
@@ -76,4 +79,5 @@ $(window).ready( function () {
             })
         }
     })
+
 })
