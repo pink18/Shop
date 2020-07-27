@@ -24,7 +24,7 @@ $(window).on('load', function () {
     parent.$('.left').css({
         display: 'none'
     })
-    var x=0;
+    var x = 0;
     $('.n-title').on('click', 'li', function () {
         $(`.n-title>li:eq(${x})`).css({
             borderRadius: '0',
@@ -37,8 +37,12 @@ $(window).on('load', function () {
             backgroundColor: '#800080',
             color: '#fff'
         })
-        var category= $(`.n-title>li:eq(${x})>a`).html();
+        var category = $(`.n-title>li:eq(${x})>a`).html();
         sessionStorage.setItem('category', category);
+        parent.$(`li`).css({
+            borderBottom: 'none',
+            color: '#000'
+        });
     })
     pic.onmouseover = function () {
         stop();
@@ -148,6 +152,31 @@ $(window).on('load', function () {
             success: function (data) {
                 data = JSON.stringify(data);
                 localStorage.setItem('shoplist', data);
+                shoplist = localStorage.getItem('shoplist');
+                shoplist = JSON.parse(shoplist);
+                $.each(shoplist, function (index, item) {
+                    // console.log(index, item)
+                    var {
+                        img_list_url,
+                        title,
+                        price,
+                        mack,
+                    } = item;
+                    var tmp = `<li>
+            <a href="./details.html">
+            <img src=${img_list_url} alt="">
+            <h3 class="name">${title}</h3>
+            <p class="introduce">
+                <span class="price">￥${price}</span>
+                <span class="recommend">
+                    <span class="together">${mack}</span>
+                </span>
+            </p>
+            </a>
+            </li>`
+                    $('.item').append(tmp)
+                })
+                return;
             },
             error: function () {
                 console.log('系统维护中');
@@ -176,7 +205,7 @@ parent.onscroll = function () {
     var pageH = document.body.offsetHeight;
     var headerH = parent.$('header')[0].offsetHeight;
     if (H + scrollTop - headerH >= pageH) {
-        a += 300;
+        a += 1800;
         parent.$('iframe').css({
             height: a + 'px'
         })

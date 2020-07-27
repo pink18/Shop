@@ -7,10 +7,14 @@ $(window).on('load', function () {
     //             display: 'none'
     //         })
     //     }, 500)
-    parent.$('html,body').scrollTop(0);
+
+    // parent.$('html,body').scrollTop(0);
+
+    // 初始化让父级left显示
     parent.$('.left').css({
         display: 'block'
     })
+
     shoplist = localStorage.getItem('shoplist');
     shoplist = JSON.parse(shoplist);
     category = sessionStorage.getItem('category');
@@ -103,7 +107,7 @@ $(window).on('load', function () {
         for (var i = 0; i < parent.$('.left>p').length; i++) {
             (function (i) {
                 $(parent.$('.left>p')[i]).on('click', function () {
-                    parent.$('html,body').scrollTop($('.shop h2')[i].offsetTop - 100);
+                    parent.$('html,body').scrollTop($('.shop h2')[i].offsetTop - 90);
                 })
             })(i)
         };
@@ -257,7 +261,7 @@ $(window).on('load', function () {
     for (var i = 0; i < parent.$('.left>p').length; i++) {
         (function (i) {
             $(parent.$('.left>p')[i]).on('click', function () {
-                parent.$('html,body').scrollTop($('.shop h2')[i].offsetTop + 150);
+                parent.$('html,body').scrollTop($('.shop h2')[i].offsetTop - 90);
             })
         })(i)
     };

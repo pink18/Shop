@@ -2,11 +2,14 @@ parent.$('html,body').scrollTop(0);
 parent.$('iframe').css({
     height: 1120 + 'px'
 })
-$('.return').on('click',function(){
+parent.$('.left').css({
+    display: 'none'
+})
+$('.return').on('click', function () {
     parent.$('left').css({
-        display:'none'
+        display: 'none'
     })
-    location.href='../view/home.html'
+    location.href = '../view/home.html'
 })
 var id = sessionStorage.getItem('Id');
 var one = sessionStorage.getItem('type_one');
@@ -139,12 +142,12 @@ function getDetail(callback) {
                 for (var i = 0; i < imgs.length; i++) {
                     // console.log(imgs[i]);
                     var simg = document.createElement('img');
-                    var bimg=document.createElement('img');
-                    var gimg=document.createElement('img');
+                    var bimg = document.createElement('img');
+                    var gimg = document.createElement('img');
 
                     simg.src = imgs[i];
-                    bimg.src=imgs[i];
-                    gimg.src=imgs[i];
+                    bimg.src = imgs[i];
+                    gimg.src = imgs[i];
                     // console.log(simg);
                     // var small=document.querySelector('.small');
                     $('.small').append(simg);
@@ -167,8 +170,8 @@ function getDetail(callback) {
         },
         dataType: 'JSON',
         success: function (data) {
-            var a=[];
-            for(var i=0;i<10;i++){
+            var a = [];
+            for (var i = 0; i < 10; i++) {
                 a.push(data[i]);
                 // console.log(a);
             }

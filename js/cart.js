@@ -1,12 +1,14 @@
 $(window).on('load', function () {
-//     parent.$('.loading').css({
-//         display: 'block'
-//     })
-//     setTimeout(function () {
-//         parent.$('.loading').css({
-//             display: 'none'
-//         })
-//     }, 500)
+    //     parent.$('.loading').css({
+    //         display: 'block'
+    //     })
+    //     setTimeout(function () {
+    //         parent.$('.loading').css({
+    //             display: 'none'
+    //         })
+    //     }, 500)
+
+    // 购物车tab切换
     parent.$(`li`).css({
         borderBottom: 'none',
         color: '#000'

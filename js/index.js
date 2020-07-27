@@ -1,4 +1,4 @@
-$(window).ready( function () {
+$(window).ready(function () {
     $('#resgiter').on('click', function (e) {
         if ($('#resgiter').html() == '退出登录') {
             $('#login').html('登录');
@@ -6,7 +6,7 @@ $(window).ready( function () {
             $("#resgiter").attr('href', 'javascript:;');
             $(`li`).css({
                 borderBottom: 'none',
-                color:'#000'
+                color: '#000'
             });
             window.localStorage.removeItem('token')
         } else {
@@ -25,7 +25,7 @@ $(window).ready( function () {
         $(this).height(mainheight);
     });
 
-    $('.index a').on('click',function(){
+    $('.index a').on('click', function () {
         $('.loading').css({
             display: 'block'
         })
@@ -44,13 +44,13 @@ $(window).ready( function () {
         })
     }, 500)
 
-    if(localStorage.getItem('token')){
+    if (localStorage.getItem('token')) {
         $('#login').html('购物车');
         $('#resgiter').html('退出登录');
     }
     $('.index').on('click', 'li', function () {
         $('.left').css({
-            display:'none'
+            display: 'none'
         })
         // $(`li`).css({
         //     borderBottom: 'none',
@@ -63,20 +63,40 @@ $(window).ready( function () {
         //     color:'#860c86'
         // });
     })
-    $('.t-return').on('click',function(){
+    $('.t-return').on('click', function () {
         $('html,body').scrollTop(0);
     })
-    $(window).scroll(function(){
-        var scrollTop=document.documentElement.scrollTop;
+    $(window).scroll(function () {
+        var scrollTop = document.documentElement.scrollTop;
         // console.log(scrollTop);
-        if(scrollTop>=800){
+        if (scrollTop >= 800) {
             $('.t-return').css({
-                display:'block'
+                display: 'block'
             })
-        }else{
+        } else {
             $('.t-return').css({
-                display:'none'
+                display: 'none'
             })
+        }
+        if (scrollTop >= 170) {
+            $('.h-bottom').css({
+                position: 'fixed',
+                top: 0,
+                boxShadow: '0px 2px 6px #999'
+            });
+            $('.index').append($('.search'));
+            $('.search').css({
+                top:'2px'
+            });
+        } else {
+            $('.h-bottom').css({
+                position: 'static',
+                boxShadow: 'none'
+            });
+            $('.content').append($('.search'));
+            $('.search').css({
+                top:'18px'
+            });
         }
     })
 

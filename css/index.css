@@ -5,10 +5,10 @@ header {
     box-shadow: 0px 2px 6px #999;
 }
 
-.h-top {
-    position: relative;
+.content {
     width: 1200px;
     margin: 0 auto;
+    position: relative;
 }
 
 .h-top img {
@@ -18,7 +18,7 @@ header {
 }
 
 .search {
-    width: 600px;
+    width: 500px;
     font-size: 0;
     display: inline-block;
     position: absolute;
@@ -26,7 +26,7 @@ header {
     top: 18px;
 }
 
-.s-box {
+.box {
     width: 369px;
     height: 40px;
     padding: 0 15px;
@@ -37,22 +37,22 @@ header {
     border-bottom-left-radius: 5px;
 }
 
-.s-box::-webkit-input-placeholder {
+.box::-webkit-input-placeholder {
     /*WebKit browsers*/
     color: #c0c4cc;
 }
 
-.s-box::-moz-input-placeholder {
+.box::-moz-input-placeholder {
     /*Mozilla Firefox*/
     color: #c0c4cc;
 }
 
-.s-box::-ms-input-placeholder {
+.box::-ms-input-placeholder {
     /*Internet Explorer*/
     color: #c0c4cc;
 }
 
-.s-btn {
+.btn {
     height: 40px;
     padding: 8px 30px;
     background-color: #fff;
@@ -66,25 +66,29 @@ header {
 }
 
 .h-bottom {
-    width: 1200px;
-    margin: 0 auto;
+    width: 100%;
     padding: 15px 0;
+    background-color: #fff;
 }
 
 .h-bottom>ul {
+    width: 1200px;
+    margin: 0 auto;
     display: flex;
+    position: relative;
 }
 
 .h-bottom li {
     margin-left: 20px;
 }
-.index>li>a{
+.index>li>a {
     display: block;
     padding: 10px 20px;
     color: inherit;
     font-weight: 600;
 }
-.loading{
+
+.loading {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -93,14 +97,16 @@ header {
     opacity: 0.9;
     display: none;
 }
-.loading>img{
+
+.loading>img {
     width: 400px;
     position: relative;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-.t-return{
+
+.t-return {
     width: 66px;
     height: 60px;
     padding: 10px;
@@ -116,10 +122,12 @@ header {
     cursor: pointer;
     display: none;
 }
-.t-return:hover{
+
+.t-return:hover {
     opacity: 1;
 }
-.left{
+
+.left {
     width: 122px;
     border: 1px solid #986d98;
     padding: 10px;
@@ -132,14 +140,17 @@ header {
     display: none;
     background-color: #fff;
 }
-.left>p{
+
+.left>p {
     cursor: pointer;
 }
-.left>p:hover{
+
+.left>p:hover {
     font-weight: bolder !important;
     color: purple !important;
     filter: drop-shadow(0 0 10px purple) !important;
 }
-.title{
+
+.title {
     text-align: center;
 }
